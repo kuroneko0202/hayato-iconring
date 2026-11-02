@@ -6,7 +6,6 @@ html, body {
   padding: 0;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
-
   background: linear-gradient(135deg, #24272c 0%, #111316 100%);
   color: #e2e5e9;
   text-align: center;
@@ -83,7 +82,7 @@ header h1::after {
   font-size: 0.85em;
   margin-top: 0;
   padding: 0.9em 1em;
-  color: #b2b8c2;
+  color: #9aa1ab;
 }
 
 /* ================================
@@ -134,6 +133,17 @@ select {
   box-sizing: border-box;
 }
 
+select {
+  padding: 0.75em 2.5em 0.75em 1em;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
 input[type="file"]:hover,
 select:hover {
   background: rgba(255, 255, 255, 0.09);
@@ -156,10 +166,10 @@ input[type="file"]::-webkit-file-upload-button {
   background: linear-gradient(135deg, #3d4147, #282a2e);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
-  color: #e2e5e9;
+  color: #ffffff;
 
   font-family: "Noto Sans JP", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.85em;
 
   cursor: pointer;
@@ -230,7 +240,6 @@ canvas {
   min-width: 120px;
   height: 52px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #ffffff 0%, #e8eae Chatham 100%);
   background: linear-gradient(135deg, #ffffff, #e3e5e8);
   color: #111316;
   border: none;
