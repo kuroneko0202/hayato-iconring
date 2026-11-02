@@ -322,7 +322,15 @@ footer {
   margin-top: 30px;
   padding-top: 15px;
   text-align: center;
-  font-size: 0.75em;
   line-height: 1.8;
-  color: #8a96aa;
+}
+
+.footer-site {
+  font-size: 0.8em;
+  color: #6b7a99;
+}
+
+.footer-copy {
+  font-size: 0.7em;
+  color: #9aa4b5;
 }
