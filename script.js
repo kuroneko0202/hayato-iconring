@@ -283,10 +283,29 @@ function redraw() {
   }
 
   if (frameImage && frameImage.complete) {
-    ctx.drawImage(frameImage, 0, 0, canvas.width, canvas.height);
+    const fw = frameImage.width;
+    const fh = frameImage.height;
+    let sx, sy, sWidth, sHeight;
+
+    if (fw > fh) {
+      sWidth = fh;
+      sHeight = fh;
+      sx = (fw - fh) / 2;
+      sy = 0;
+    } else {
+      sWidth = fw;
+      sHeight = fw;
+      sx = 0;
+      sy = (fh - fw) / 2;
+    }
+
+    ctx.drawImage(
+      frameImage,
+      sx, sy, sWidth, sHeight,
+      0, 0, canvas.width, canvas.height
+    );
   }
 }
-
 // ================================
 // ▼ High-resolution save（Safari＝表示のみ）
 // ================================
