@@ -57,8 +57,7 @@ async function loadFrames() {
 // ▼ Canvas resizing
 // ================================
 function resizeCanvas() {
-  const rect = canvas.getBoundingClientRect();
-  const size = rect.width;
+  const size = canvas.clientWidth;
   if (!size) return;
 
   canvas.width = size;
@@ -72,10 +71,9 @@ window.addEventListener("DOMContentLoaded", () => {
   setTimeout(resizeCanvas, 50);
   const ua = navigator.userAgent.toLowerCase();
   const isLine = ua.includes("line");
-  if (isLine) {
-    const lineGuide = document.getElementById("lineGuide");
-    if (lineGuide) lineGuide.style.display = "block";
-  }
+if (isLine) {
+  document.getElementById("lineGuide").style.display = "block";
+}
 });
 
 window.addEventListener("resize", () => {
