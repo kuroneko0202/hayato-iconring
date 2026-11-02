@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xxxxx</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-card">
+
+    <header>
+      <h1>xxxxx</h1>
+      <p class="description">画像をフレーム付きアイコンにできます</p>
+    </header>
+
+    <div id="lineGuide" class="line-guide" style="display:none;">
+      <div class="line-guide-content">
+        <div class="line-guide-title">
+        🌐 LINEから開いています
+        </div>
+
+        <div class="line-guide-text">
+          LINE内ブラウザでは、作成した画像の保存が正常に動作しない場合があります。<br>
+          画面の右下(または右上)にある「︙」メニューから標準ブラウザで開いてください。<br>
+        </div>
+      </div>
+    </div>
+    
+    <section class="notice">
+      <h2>ご利用にあたって</h2>
+      <p>
+        ・PC/スマートフォンどちらからでも利用できます。<br>
+        ・選択した画像はサーバに保存されません。
+      </p>
+    </section>
+
+    <main>
+      <!-- Image Selection -->
+      <label><span class="step-badge">1</span> 画像を選択</label>
+      <input type="file" id="imageInput" accept="image/*">
+
+      <!-- Frame Selection -->
+      <label><span class="step-badge">2</span> フレームを選択</label>
+      <select id="frameSelect">
+        <option value="">選択してください</option>
+      </select>
+
+      <!-- Canvas -->
+      <canvas id="canvas"></canvas>
+
+      <!-- Save & Reset -->
+      <div class="button-row">
+        <button id="saveBtn" class="btn-save">保存</button>
+        <button id="resetBtn" class="btn-reset">リセット</button>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
